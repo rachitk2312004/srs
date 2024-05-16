@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Song Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="f1">Song Recommendation System</h1>
+    </header>
+
+    <nav class="f2">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        <div class="intro f3">
+            <h2>Having problems finding the best song for your Instagram or Whatsapp stories?</h2>
+            <h2>Within seconds, get the most suitable song based on the emotions in your photo.</h2>
+        </div>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <div class="file-upload ">
+                <label for="file">
+                    <h2>Upload a file in .jpeg or .jpg format</h2>
+                </label>
+                <input type="file" id="file" name="file" accept=".jpeg, .jpg" required>
+            </div>
+            
+            <div class="language-filter ">
+                <label>Filter by Language:</label>
+                <input type="radio" id="hindiSongs" name="typesongs" value="hindiSongs" checked />
+                <label for="hindiSongs">Hindi Songs</label>
+
+                <input type="radio" id="punjabiSongs" name="typesongs" value="punjabiSongs" />
+                <label for="punjabiSongs">Punjabi Songs</label>
+
+                <input type="radio" id="englishSongs" name="typesongs" value="englishSongs" />
+                <label for="englishSongs">English Songs</label>
+
+            </div>
+            
+            <hr>
+            <span>
+                <button type="submit">Submit</button>
+            </span>
+            
+            <span>
+                <button type="reset">Clear</button>
+            </span>
+            
+        </form>
+
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+
+        {% if filename %}
+            <div class="result-section">
+                <h2>Uploaded Image:</h2>
+                <img src="{{ image_url }}" alt="Uploaded Image" class="uploaded-image">
+                
+                <h2>Detected Emotion:</h2>
+                <p>{{ emotion }}</p>
+                
+                <h2>Recommended Songs:</h2>
+                {% for song in recommended_songs %}
+                    <p>{{ song.name }} by {{ song.artist }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </main>
+</body>
+
+</html>

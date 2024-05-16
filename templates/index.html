@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<title>Song Recommendation System</title>
+<style>
+    body {
+        font-family: Comic Sans MS;
+        margin: 0;
+        padding: 0;
+        background-color: lightpink; 
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title-container {
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 200px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease; /* Add transition */
+}
+.project-title {
+    font-size: 6rem;
+    color: red; /* Text color */
+    text-align: center;
+    transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease; /* Add transitions */
+    font-weight: normal; /* Initial font weight */
+}
+.project-title:hover {
+    color: #ff7f50; /* Change color on hover */
+    font-size: 5rem; /* Increase font size on hover */
+    font-weight: bold; /* Make font bold on hover */
+}
+    .box-container {
+        display: flex;
+        justify-content: center;
+        gap: 200px; /* Adjusted gap */
+    }
+    .box {
+        color: black;
+        width: 250px; /* Increased width */
+        height: 200px; /* Increased height */
+        background-color: #ff01f7; /* Default background color */
+        background-blend-mode: overlay; /* Blend mode */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 10px; /* Rounded corners */
+    }
+    .box:hover {
+        transform: scale(1.1);
+    }
+    .h2 {
+  font-size: 30px;
+}
+.box:hover::after {
+    font-size: 1.5rem;
+    color: red;
+        content: "Click me"; /* Text to be shown on hover */
+        position: absolute; /* Position the text absolutely within the box */
+        bottom: 10px; /* Adjust vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        background-color: rgba(255, 255, 255, 0.7); /* Background color for the additional text with transparency */
+        padding: 5px 10px; /* Add some padding */
+        border-radius: 5px; /* Add rounded corners */
+}
+#line {
+text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title-container">
+        <div class="h2">Welcome to:</div>
+        <div class="project-title">Song Recommendation System</div>
+    </div>
+
+    <div class="box-container">
+        <a  id="line" href="/recommendation" class="box">Find Song</a>
+        <a  id="line" href="/about" class="box">About us</a>
+        <a  id="line" href="/contact" class="box">Contact Us</a>
+    </div>
+</div>
+
+</body>
+</html>

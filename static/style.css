@@ -1,0 +1,121 @@
+
+body {
+    font-family: Comic Sans MS;
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff01f7;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color:rgb(224, 132, 189);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-form {
+    background-color:pink;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-upload h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.language-filter {
+    margin-bottom: 20px;
+}
+
+.language-filter label {
+    margin-right: 10px;
+}
+
+.result-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+.uploaded-image {
+    max-width: 300px; /* Adjust the max-width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Style form buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+}
+.f2{
+    font-size: 2.5rem;
+}
+.f1{
+    font-size: 3.5rem;
+}
+.f3{
+    font-size: 1.5rem;
+}
+.f4{
+    font-size: 1rem;
+}
+.c1{
+    text-align: center;
+    align-items: center;
+}
+.imgee{
+    border-image: round;
+}
